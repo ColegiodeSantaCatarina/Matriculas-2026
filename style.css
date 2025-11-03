@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #030f3d;
+}
+
+
+.banner-container {
+    position: relative; 
+    width: 100%; 
+}
+
+.banner-container img {
+    width: 100%; 
+    display: block; 
+}
+
+.button-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 16%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+.button-wrapper button {
+    padding: 20px 35px; 
+    font-size: 18px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 20px; 
+    color: #333; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+a {
+    text-decoration: none;
+  }
+  
+.site {
+    background-color: white; 
+    color: #333; 
+    border: 1px solid #ddd; 
+}
+.site:hover {
+    background-color: #f0f0f0; 
+}
+.zap {
+    background-color: #25D366;
+    color: white; 
+}
+.zap:hover {
+    background-color: #1DA851; 
+}
+.button-wrapper button i {
+    margin-right: 10px;
+    font-size: 20px; 
+}
+.seccao2 {
+    display: flex;
+    justify-content: center; /* Centraliza o grupo de imagens */
+    align-items: center;     /* Alinha verticalmente */
+    flex-wrap: nowrap;       
+
+    /* Tamanho */
+    width: 100%;
+    min-height: 80vh; 
+    padding: 10px 5%; 
+    box-sizing: border-box; 
+}
+.secao-info {
+    max-width: 800px;
+    margin: 40px auto; 
+    padding: 30px;
+    border-top: 2px solid #FFC107;
+    border-bottom: 2px solid #FFC107; 
+}
+
+.secao-info h2 {
+    color: #FFC107; 
+    
+    font-size: 2.5rem;  
+    font-weight: 700;   
+    margin-top: 0;     
+    margin-bottom: 15px; 
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.secao-info p {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    line-height: 1.7; 
+    margin-bottom: 30px; 
+}
+.secao-info p:last-of-type {
+    margin-bottom: 0;
+}
+/* A MÁGICA: Faz a rolagem ser suave em vez de "pular" */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Estilo da Seção "Inscreva-se" --- */
+
+.secao-inscricao {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    width: 100%;
+    min-height: 70vh;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    color: #FFFFFF; /* Texto branco */
+    
+    /* Fundo azul escuro com o brilho azul claro (como na foto) */
+    background: radial-gradient(
+        circle at 90% 50%, 
+        rgba(0, 80, 255, 0.4) 0%,  /* Azul claro com transparência */
+        rgba(0, 80, 255, 0) 40%     /* Transparente */
+    );
+    background-color: #030f3d; /* Fundo azul escuro principal */
+}
+
+/* --- Coluna da Esquerda (Agendar) --- */
+.coluna-esquerda {
+    flex: 1; /* Ocupa metade do espaço */
+    min-width: 300px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coluna-esquerda h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.botao-agendar-zap {
+    background-color: #34D399; /* Verde (WhatsApp) */
+    color: #030f3d; /* Texto escuro para contrastar */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 35px;
+    border-radius: 50px; /* Bem arredondado */
+    display: inline-block;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.botao-agendar-zap:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    background-color: #4AFAAF;
+}
+.botao-agendar-zap i {
+    margin-right: 10px;
+}
+
+
+/* --- Coluna da Direita (Botões) --- */
+.coluna-direita {
+    flex: 1; /* Ocupa a outra metade */
+    min-width: 300px;
+    padding-left: 20px;
+}
+
+.coluna-direita h2 {
+    color: #FFD700; /* Amarelo-dourado */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.coluna-direita p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.lista-segmentos a {
+    display: block; /* Faz cada link ocupar uma linha */
+    background-color: #FFFFFF;
+    color: #030f3d; /* Texto azul escuro */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-align: center;
+    
+    padding: 18px 30px;
+    margin-bottom: 15px;
+    border-radius: 50px; /* Arredondado */
+    
+    border: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
+}
+.lista-segmentos a:hover {
+    /* Efeito ao passar o mouse: inverte as cores */
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.secao-explicacao {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    
+    /* * ESTA É A MUDANÇA PRINCIPAL:
+     * Força os itens a ficarem LADO A LADO, mesmo que 
+     * precise "apertar" eles.
+     */
+    flex-wrap: nowrap; /* Antes estava 'wrap' */
+
+    width: 100%;
+    min-height: 80vh;
+    padding: 60px 8%;  /* Espaçamento interno (8% nas laterais) */
+    box-sizing: border-box;
+    overflow: hidden;  
+
+    /* Fundo PADRÃO (gradiente na esquerda) */
+    background: radial-gradient(
+        circle at 10% 50%,
+        rgba(220, 255, 0, 0.15) 0%,
+        rgba(220, 255, 0, 0) 35%
+    );
+    background-color: #030f3d;
+}
+
+/* Alternância (continua igual) */
+.secao-explicacao:nth-child(even) {
+    flex-direction: row-reverse;
+    background: radial-gradient(
+        circle at 90% 50%, 
+        rgba(220, 255, 0, 0.15) 0%,
+        rgba(220, 255, 0, 0) 35%
+    );
+    background-color: #030f3d;
+}
+
+/* A MÁGICA DA ALTERNÂNCIA:
+   Aplica-se a cada seção PAR (a 2ª, 4ª, 6ª, etc.)
+*/
+.secao-explicacao:nth-child(even) {
+    /* 1. Inverte a ordem das colunas */
+    flex-direction: row-reverse;
+
+    /* 2. Inverte a posição do gradiente de fundo */
+    background: radial-gradient(
+        circle at 90% 50%, /* Posição: Direita */
+        rgba(220, 255, 0, 0.15) 0%,
+        rgba(220, 255, 0, 0) 35%
+    );
+    background-color: #030f3d;
+}
+
+/* --- Estilo das Colunas (LADO A LADO POR PADRÃO) --- */
+
+.coluna-imagem,
+.coluna-texto {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coluna-imagem {
+    flex-basis: 45%; /* Imagem ocupa 45% (Padrão) */
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.coluna-imagem img {
+    max-width: 100%; /* Imagem preenche sua coluna (Padrão) */
+    height: auto;
+}
+
+.coluna-texto {
+    flex-basis: 55%; /* Texto ocupa 55% (Padrão) */
+    padding-left: 40px; /* Espaço entre imagem e texto (Padrão) */
+    color: #FFFFFF;
+}
+
+/* Ajusta o padding do texto quando a ordem é invertida (Padrão) */
+.secao-explicacao:nth-child(even) .coluna-texto {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+/* --- Estilo do Texto (continua igual) --- */
+.coluna-texto h2 {
+    color: #FFD700; /* Amarelo */
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.coluna-texto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Botão de Agendar (continua igual) */
+.botao-agendar-interno {
+    background-color: #34D399; /* Verde */
+    color: #030f3d; /* Texto escuro */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    max-width: 280px; 
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.botao-agendar-interno:hover {
+    transform: scale(1.05);
+    background-color: #4AFAAF;
+}
+.botao-agendar-interno i {
+    margin-right: 10px;
+}
+
+
+/* --- NOVA REGRA: Ajuste para Telas PEQUENAS (Mobile) --- */
+@media (max-width: 700px) {
+    
+    .secao-explicacao,
+    .secao-explicacao:nth-child(even) {
+        /* Garante que o texto venha depois da imagem */
+        flex-direction: column; 
+    }
+
+    .coluna-imagem,
+    .coluna-texto {
+        flex-basis: 100%; /* Faz empilhar */
+        align-items: center; /* Centraliza no mobile */
+        text-align: center;  /* Centraliza texto no mobile */
+    }
+
+    .coluna-imagem img {
+        max-width: 90%; /* Imagem não fica tão grande */
+    }
+
+    .coluna-texto,
+    .secao-explicacao:nth-child(even) .coluna-texto {
+        /* Remove paddings laterais no mobile */
+        padding-left: 0; 
+        padding-right: 0;
+    }
+    
+    .botao-agendar-interno {
+         margin-left: auto; /* Centraliza o botão */
+         margin-right: auto;
+    }
+}
