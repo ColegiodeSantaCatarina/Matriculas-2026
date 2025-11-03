@@ -4,7 +4,6 @@ body {
     background-color: #030f3d;
 }
 
-
 .banner-container {
     position: relative; 
     width: 100%; 
@@ -13,8 +12,10 @@ body {
 .banner-container img {
     width: 100%; 
     display: block; 
+    height: auto;
 }
 
+/* --- Botões sobre o banner --- */
 .button-wrapper {
     position: absolute;
     top: 50%;
@@ -24,6 +25,7 @@ body {
     flex-direction: column;
     gap: 20px; 
 }
+
 .button-wrapper button {
     padding: 20px 35px; 
     font-size: 18px; 
@@ -38,10 +40,11 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
 }
+
 a {
     text-decoration: none;
-  }
-  
+}
+
 .site {
     background-color: white; 
     color: #333; 
@@ -50,6 +53,7 @@ a {
 .site:hover {
     background-color: #f0f0f0; 
 }
+
 .zap {
     background-color: #25D366;
     color: white; 
@@ -57,22 +61,25 @@ a {
 .zap:hover {
     background-color: #1DA851; 
 }
+
 .button-wrapper button i {
     margin-right: 10px;
     font-size: 20px; 
 }
+
+/* --- Seção 2 --- */
 .seccao2 {
     display: flex;
-    justify-content: center; /* Centraliza o grupo de imagens */
-    align-items: center;     /* Alinha verticalmente */
-    flex-wrap: nowrap;       
-
-    /* Tamanho */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     width: 100%;
     min-height: 80vh; 
     padding: 10px 5%; 
     box-sizing: border-box; 
 }
+
+/* --- Texto informativo --- */
 .secao-info {
     max-width: 800px;
     margin: 40px auto; 
@@ -83,7 +90,6 @@ a {
 
 .secao-info h2 {
     color: #FFC107; 
-    
     font-size: 2.5rem;  
     font-weight: 700;   
     margin-top: 0;     
@@ -101,35 +107,35 @@ a {
 .secao-info p:last-of-type {
     margin-bottom: 0;
 }
-/* A MÁGICA: Faz a rolagem ser suave em vez de "pular" */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* --- Estilo da Seção "Inscreva-se" --- */
-
+/* --- Seção Inscrição --- */
 .secao-inscricao {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    flex-wrap: wrap;
     width: 100%;
     min-height: 70vh;
     padding: 50px 5%;
     box-sizing: border-box;
-    color: #FFFFFF; /* Texto branco */
-    
-    /* Fundo azul escuro com o brilho azul claro (como na foto) */
+    color: #FFFFFF;
     background: radial-gradient(
         circle at 90% 50%, 
-        rgba(0, 80, 255, 0.4) 0%,  /* Azul claro com transparência */
-        rgba(0, 80, 255, 0) 40%     /* Transparente */
+        rgba(0, 80, 255, 0.4) 0%, 
+        rgba(0, 80, 255, 0) 40%
     );
-    background-color: #030f3d; /* Fundo azul escuro principal */
+    background-color: #030f3d;
 }
 
-/* --- Coluna da Esquerda (Agendar) --- */
-.coluna-esquerda {
-    flex: 1; /* Ocupa metade do espaço */
+.coluna-esquerda,
+.coluna-direita {
+    flex: 1;
     min-width: 300px;
+}
+
+.coluna-esquerda {
     padding-right: 20px;
     display: flex;
     flex-direction: column;
@@ -143,36 +149,32 @@ html {
 }
 
 .botao-agendar-zap {
-    background-color: #34D399; /* Verde (WhatsApp) */
-    color: #030f3d; /* Texto escuro para contrastar */
+    background-color: #34D399;
+    color: #030f3d;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     padding: 20px 35px;
-    border-radius: 50px; /* Bem arredondado */
+    border-radius: 50px;
     display: inline-block;
     max-width: 300px;
     text-align: center;
     transition: transform 0.2s ease;
 }
 .botao-agendar-zap:hover {
-    transform: scale(1.05); /* Efeito de zoom */
+    transform: scale(1.05);
     background-color: #4AFAAF;
 }
 .botao-agendar-zap i {
     margin-right: 10px;
 }
 
-
-/* --- Coluna da Direita (Botões) --- */
 .coluna-direita {
-    flex: 1; /* Ocupa a outra metade */
-    min-width: 300px;
     padding-left: 20px;
 }
 
 .coluna-direita h2 {
-    color: #FFD700; /* Amarelo-dourado */
+    color: #FFD700;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
@@ -182,81 +184,52 @@ html {
 }
 
 .lista-segmentos a {
-    display: block; /* Faz cada link ocupar uma linha */
+    display: block;
     background-color: #FFFFFF;
-    color: #030f3d; /* Texto azul escuro */
+    color: #030f3d;
     font-weight: bold;
     font-size: 1.1rem;
     text-decoration: none;
     text-align: center;
-    
     padding: 18px 30px;
     margin-bottom: 15px;
-    border-radius: 50px; /* Arredondado */
-    
+    border-radius: 50px;
     border: 2px solid #FFFFFF;
     transition: all 0.3s ease;
 }
 .lista-segmentos a:hover {
-    /* Efeito ao passar o mouse: inverte as cores */
     background-color: transparent;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
 }
 
+/* --- Seção Explicação --- */
 .secao-explicacao {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    
-    /* * ESTA É A MUDANÇA PRINCIPAL:
-     * Força os itens a ficarem LADO A LADO, mesmo que 
-     * precise "apertar" eles.
-     */
-    flex-wrap: nowrap; /* Antes estava 'wrap' */
-
+    align-items: center;
+    flex-wrap: nowrap;
     width: 100%;
     min-height: 80vh;
-    padding: 60px 8%;  /* Espaçamento interno (8% nas laterais) */
+    padding: 60px 8%;
     box-sizing: border-box;
-    overflow: hidden;  
-
-    /* Fundo PADRÃO (gradiente na esquerda) */
+    overflow: hidden;
     background: radial-gradient(
         circle at 10% 50%,
-        rgba(220, 255, 0, 0.15) 0%,
-        rgba(220, 255, 0, 0) 35%
+        rgba(0, 80, 255, 0.4) 0%,  
+        rgba(0, 80, 255, 0) 35%
     );
     background-color: #030f3d;
 }
 
-/* Alternância (continua igual) */
 .secao-explicacao:nth-child(even) {
     flex-direction: row-reverse;
     background: radial-gradient(
         circle at 90% 50%, 
-        rgba(220, 255, 0, 0.15) 0%,
-        rgba(220, 255, 0, 0) 35%
+        rgba(0, 80, 255, 0.4) 0%,  
+        rgba(0, 80, 255, 0) 35%
     );
     background-color: #030f3d;
 }
-
-/* A MÁGICA DA ALTERNÂNCIA:
-   Aplica-se a cada seção PAR (a 2ª, 4ª, 6ª, etc.)
-*/
-.secao-explicacao:nth-child(even) {
-    /* 1. Inverte a ordem das colunas */
-    flex-direction: row-reverse;
-
-    /* 2. Inverte a posição do gradiente de fundo */
-    background: radial-gradient(
-        circle at 90% 50%, /* Posição: Direita */
-        rgba(220, 255, 0, 0.15) 0%,
-        rgba(220, 255, 0, 0) 35%
-    );
-    background-color: #030f3d;
-}
-
-/* --- Estilo das Colunas (LADO A LADO POR PADRÃO) --- */
 
 .coluna-imagem,
 .coluna-texto {
@@ -267,30 +240,29 @@ html {
 }
 
 .coluna-imagem {
-    flex-basis: 45%; /* Imagem ocupa 45% (Padrão) */
+    flex-basis: 45%;
     align-items: flex-start;
     padding: 20px 0;
 }
+
 .coluna-imagem img {
-    max-width: 100%; /* Imagem preenche sua coluna (Padrão) */
+    max-width: 100%;
     height: auto;
 }
 
 .coluna-texto {
-    flex-basis: 55%; /* Texto ocupa 55% (Padrão) */
-    padding-left: 40px; /* Espaço entre imagem e texto (Padrão) */
+    flex-basis: 55%;
+    padding-left: 40px;
     color: #FFFFFF;
 }
 
-/* Ajusta o padding do texto quando a ordem é invertida (Padrão) */
 .secao-explicacao:nth-child(even) .coluna-texto {
     padding-left: 0;
     padding-right: 40px;
 }
 
-/* --- Estilo do Texto (continua igual) --- */
 .coluna-texto h2 {
-    color: #FFD700; /* Amarelo */
+    color: #FFD700; 
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 20px;
@@ -301,17 +273,16 @@ html {
     margin-bottom: 30px;
 }
 
-/* Botão de Agendar (continua igual) */
 .botao-agendar-interno {
-    background-color: #34D399; /* Verde */
-    color: #030f3d; /* Texto escuro */
+    background-color: #34D399;
+    color: #030f3d;
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
     padding: 18px 30px;
     border-radius: 50px;
     display: inline-block;
-    max-width: 280px; 
+    max-width: 280px;
     text-align: center;
     transition: transform 0.2s ease;
 }
@@ -323,36 +294,97 @@ html {
     margin-right: 10px;
 }
 
+/* --- Responsividade --- */
 
-/* --- NOVA REGRA: Ajuste para Telas PEQUENAS (Mobile) --- */
+/* Tablets */
+@media (max-width: 1000px) {
+    .coluna-esquerda h2,
+    .coluna-direita h2,
+    .coluna-texto h2 {
+        font-size: 2rem;
+    }
+
+    .coluna-texto p,
+    .coluna-direita p {
+        font-size: 1rem;
+    }
+
+    .button-wrapper button {
+        min-width: 250px;
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+}
+
+/* Celulares grandes */
 @media (max-width: 700px) {
-    
+    .banner-container img {
+        height: auto;
+    }
+
+    .button-wrapper {
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+
+    .button-wrapper button {
+        width: 80%;
+        max-width: 250px;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
     .secao-explicacao,
     .secao-explicacao:nth-child(even) {
-        /* Garante que o texto venha depois da imagem */
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .coluna-imagem,
     .coluna-texto {
-        flex-basis: 100%; /* Faz empilhar */
-        align-items: center; /* Centraliza no mobile */
-        text-align: center;  /* Centraliza texto no mobile */
+        flex-basis: 100%;
+        align-items: center;
+        text-align: center;
     }
 
     .coluna-imagem img {
-        max-width: 90%; /* Imagem não fica tão grande */
+        max-width: 90%;
     }
 
     .coluna-texto,
     .secao-explicacao:nth-child(even) .coluna-texto {
-        /* Remove paddings laterais no mobile */
-        padding-left: 0; 
+        padding-left: 0;
         padding-right: 0;
     }
-    
+
     .botao-agendar-interno {
-         margin-left: auto; /* Centraliza o botão */
-         margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .coluna-esquerda h2,
+    .coluna-direita h2,
+    .coluna-texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .button-wrapper button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .secao-info {
+        padding: 20px;
+    }
+
+    .botao-agendar-zap,
+    .botao-agendar-interno {
+        width: 100%;
+        max-width: none;
+        font-size: 1rem;
     }
 }
