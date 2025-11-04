@@ -1,17 +1,31 @@
+/* --- Configuração Global --- */
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; 
+    
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
     background-color: #030f3d;
 }
 
+/* --- Banner --- */
 .banner-container {
-    position: relative; 
-    width: 100%; 
+    position: relative;
+    width: 100%;
 }
 
 .banner-container img {
-    width: 100%; 
-    display: block; 
+    width: 100%;
+    display: block;
     height: auto;
 }
 
@@ -19,25 +33,27 @@ body {
 .button-wrapper {
     position: absolute;
     top: 55%;
-    left: 20%; 
+    left: 16%; 
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
+    width: 90%; 
+    max-width: 350px; 
 }
 
 .button-wrapper button {
-    padding: 30px 45px; 
-    font-size: 18px; 
+    padding: 20px 30px; 
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); 
     cursor: pointer;
     border: none;
-    border-radius: 20px; 
-    color: #333; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    min-width: 350px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
@@ -46,25 +62,25 @@ a {
 }
 
 .site {
-    background-color: white; 
-    color: #333; 
-    border: 1px solid #ddd; 
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
 }
 .site:hover {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 .zap {
     background-color: #25D366;
-    color: white; 
+    color: white;
 }
 .zap:hover {
-    background-color: #1DA851; 
+    background-color: #1DA851;
 }
 
 .button-wrapper button i {
     margin-right: 10px;
-    font-size: 20px; 
+    font-size: 1.25rem; 
 }
 
 /* --- Seção 2 --- */
@@ -72,58 +88,59 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
-    min-height: 80vh; 
-    padding: 10px 5%; 
-    box-sizing: border-box; 
+    min-height: 50vh; 
+    padding: 10px 5%;
+    box-sizing: border-box;
 }
-
+.seccao2 img {
+    max-width: 1080px; 
+    width: 90%;      
+    height: auto;    
+    display: block;  
+}
 /* --- Texto informativo --- */
 .secao-info {
-    max-width: 800px;
-    margin: 40px auto; 
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 30px;
     border-top: 2px solid #FFC107;
-    border-bottom: 2px solid #FFC107; 
+    border-bottom: 2px solid #FFC107;
 }
 
 .secao-info h2 {
-    color: #FFC107; 
-    font-size: 2.5rem;  
-    font-weight: 700;   
-    margin-top: 0;     
-    margin-bottom: 15px; 
+    color: #FFC107;
+    font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem); 
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .secao-info p {
     color: #FFFFFF;
-    font-size: 1.1rem;
-    line-height: 1.7; 
-    margin-bottom: 30px; 
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem); 
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 .secao-info p:last-of-type {
     margin-bottom: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* --- Seção Inscrição --- */
 .secao-inscricao {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     width: 100%;
     min-height: 70vh;
     padding: 50px 5%;
     box-sizing: border-box;
     color: #FFFFFF;
     background: radial-gradient(
-        circle at 90% 50%, 
-        rgba(0, 80, 255, 0.4) 0%, 
+        circle at 90% 50%,
+        rgba(0, 80, 255, 0.4) 0%,
         rgba(0, 80, 255, 0) 40%
     );
     background-color: #030f3d;
@@ -132,7 +149,7 @@ html {
 .coluna-esquerda,
 .coluna-direita {
     flex: 1;
-    min-width: 300px;
+    min-width: 300px; 
 }
 
 .coluna-esquerda {
@@ -143,7 +160,7 @@ html {
 }
 
 .coluna-esquerda h2 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 1.4rem + 2.2vw, 2.8rem); 
     line-height: 1.2;
     margin-bottom: 30px;
 }
@@ -151,7 +168,7 @@ html {
 .botao-agendar-zap {
     background-color: #34D399;
     color: #030f3d;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem); 
     font-weight: bold;
     text-decoration: none;
     padding: 20px 35px;
@@ -175,11 +192,11 @@ html {
 
 .coluna-direita h2 {
     color: #FFD700;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem); 
     margin-bottom: 10px;
 }
 .coluna-direita p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem); 
     margin-bottom: 25px;
 }
 
@@ -188,7 +205,7 @@ html {
     background-color: #FFFFFF;
     color: #030f3d;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem); 
     text-decoration: none;
     text-align: center;
     padding: 18px 30px;
@@ -207,7 +224,7 @@ html {
 .secao-explicacao {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; 
     width: 100%;
     min-height: 80vh;
     padding: 60px 8%;
@@ -215,17 +232,18 @@ html {
     overflow: hidden;
     background: radial-gradient(
         circle at 10% 50%,
-        rgba(0, 80, 255, 0.4) 0%,  
+        rgba(0, 80, 255, 0.4) 0%,
         rgba(0, 80, 255, 0) 35%
     );
     background-color: #030f3d;
+    gap: 30px; 
 }
 
 .secao-explicacao:nth-child(even) {
     flex-direction: row-reverse;
     background: radial-gradient(
-        circle at 90% 50%, 
-        rgba(0, 80, 255, 0.4) 0%,  
+        circle at 90% 50%,
+        rgba(0, 80, 255, 0.4) 0%,
         rgba(0, 80, 255, 0) 35%
     );
     background-color: #030f3d;
@@ -233,14 +251,14 @@ html {
 
 .coluna-imagem,
 .coluna-texto {
-    min-width: 500px;
+    flex: 1; 
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .coluna-imagem {
-    flex-basis: 45%;
     align-items: flex-start;
     padding: 20px 0;
 }
@@ -251,7 +269,6 @@ html {
 }
 
 .coluna-texto {
-    flex-basis: 55%;
     padding-left: 40px;
     color: #FFFFFF;
 }
@@ -262,13 +279,13 @@ html {
 }
 
 .coluna-texto h2 {
-    color: #FFD700; 
-    font-size: 2.5rem;
+    color: #FFD700;
+    font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem); 
     margin-top: 0;
     margin-bottom: 20px;
 }
 .coluna-texto p {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
     line-height: 1.7;
     margin-bottom: 30px;
 }
@@ -276,7 +293,7 @@ html {
 .botao-agendar-interno {
     background-color: #34D399;
     color: #030f3d;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem); 
     font-weight: bold;
     text-decoration: none;
     padding: 18px 30px;
@@ -294,133 +311,38 @@ html {
     margin-right: 10px;
 }
 
-/* --- Responsividade --- */
-
-/* Tablets */
-@media (max-width: 1000px) {
-    .coluna-esquerda h2,
-    .coluna-direita h2,
-    .coluna-texto h2 {
-        font-size: 2rem;
-    }
-
-    .coluna-texto p,
-    .coluna-direita p {
-        font-size: 1rem;
-    }
-
-    .button-wrapper button {
-        min-width: 250px;
-        font-size: 16px;
-        padding: 15px 25px;
-    }
-}
-
-/* Celulares grandes */
-@media (max-width: 700px) {
-    .banner-container img {
-        height: auto;
-    }
-
-    .button-wrapper {
-        left: 50%;
-        top: 60%;
-        transform: translate(-50%, -50%);
-        align-items: center;
-    }
-
-    .button-wrapper button {
-        width: 80%;
-        max-width: 250px;
-        padding: 15px 20px;
-        font-size: 16px;
-    }
-
-    .secao-explicacao,
-    .secao-explicacao:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .coluna-imagem,
-    .coluna-texto {
-        flex-basis: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .coluna-imagem img {
-        max-width: 90%;
-    }
-
-    .coluna-texto,
-    .secao-explicacao:nth-child(even) .coluna-texto {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .botao-agendar-interno {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
-    .coluna-esquerda h2,
-    .coluna-direita h2,
-    .coluna-texto h2 {
-        font-size: 1.6rem;
-    }
-
-    .button-wrapper button {
-        font-size: 14px;
-        padding: 12px 20px;
-    }
-
-    .secao-info {
-        padding: 20px;
-    }
-
-    .botao-agendar-zap,
-    .botao-agendar-interno {
-        width: 100%;
-        max-width: none;
-        font-size: 1rem;
-    }
-}
-
+/* --- Seção Diferenciais --- */
 .Diferenciais {
-   padding: 60px 20px;
+    padding: 60px 20px;
     text-align: center;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
     background: radial-gradient(
         circle at 10% 50%,
-        rgba(0, 80, 255, 0.4) 0%,  
+        rgba(0, 80, 255, 0.4) 0%,
         rgba(0, 80, 255, 0) 35%
     );
     background-color: #030f3d;
 }
 .Diferenciais h2 {
-    /* Cor amarela do título */
-    color: #facc15; 
-    font-size: 2.5rem;
+    color: #facc15;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem); 
     margin-bottom: 40px;
-    position: relative; /* Para ficar acima do 'S' */
+    position: relative;
     z-index: 2;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .conteudo-diferenciais {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Para quebrar em telas menores */
+    flex-wrap: wrap; /* Ótimo! */
     gap: 30px;
-    position: relative; /* Para ficar acima do 'S' */
+    position: relative;
     z-index: 2;
-    max-width: 1200px; /* Limita a largura no centro */
-    margin: 0 auto; /* Centraliza */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .botao-agendar-diferenciais {
     background-color: #34D399;
@@ -444,66 +366,190 @@ html {
 }
 
 .coluna-box-azul {
-    flex: 1; 
-    min-width: 300px;
-    background-color: rgba(0, 80, 255, 0.2); 
-    color: #FFFFFF; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 20px; 
+    flex: 1;
+    min-width: 300px; /* Ótimo! */
+    background-color: rgba(0, 80, 255, 0.2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    font-size: 1.3rem; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); 
     font-weight: bold;
     line-height: 1.5;
-    text-align: left; 
+    text-align: left;
 }
 
 .coluna-info-visita {
-    flex: 1; /* Ocupa o espaço disponível */
-    min-width: 300px;
-    color: #FFFFFF; /* Texto branco */
-    text-align: center; /* Centraliza o h3 e o botão */
+    flex: 1;
+    min-width: 300px; /* Ótimo! */
+    color: #FFFFFF;
+    text-align: center;
 }
 
 .coluna-info-visita h3 {
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 1rem + 1vw, 2rem); 
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 30px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
+/* --- Seção Parceiros --- */
+.Parceiros {
+    text-align: center; 
+    padding: 40px 20px; 
+}
+.Parceiros h2 {
+    color: #facc15;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    text-align: center; 
+
+/* --- Responsividade --- */
+
+/* Tablets */
+@media (max-width: 1000px) {
+   
+}
 
 @media (max-width: 700px) {
-    .Diferenciais h2 {
-        text-align: center; /* Centraliza o título no celular */
+    .banner-container img {
+        height: auto;
     }
-    .coluna-box-azul {
-        font-size: 1.1rem;
+    .button-wrapper {
+        top: 60%;
+    }
+    .secao-explicacao,
+    .secao-explicacao:nth-child(even) {
+        flex-direction: column;
         text-align: center;
     }
-    .coluna-info-visita h3 {
-        font-size: 1.5rem;
+
+    .coluna-imagem,
+    .coluna-texto {
+        align-items: center;
+        text-align: center;
+    }
+
+    .coluna-imagem img {
+        max-width: 90%;
+    }
+
+    .coluna-texto,
+    .secao-explicacao:nth-child(even) .coluna-texto {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .botao-agendar-interno {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Diferenciais h2 {
+        text-align: center;
+    }
+    .coluna-box-azul {
+        text-align: center;
     }
 }
 
-/* Adicione isso dentro da sua @media (max-width: 480px) */
+/* Celulares pequenos */
 @media (max-width: 480px) {
-    .Diferenciais h2 {
-        font-size: 2rem;
+    .secao-info {
+        padding: 20px;
     }
-    .coluna-info-visita h3 {
-        font-size: 1.3rem;
+    .botao-agendar-zap,
+    .botao-agendar-interno {
+        width: 100%;
+        max-width: none;
+    }
+
+    .button-wrapper button {
+        padding: 12px 20px;
     }
 }
-.Parceiros{
+}
+
+/* --- Reset Básico e Fontes do Rodapé --- */
+.site-footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site-footer {
+    /* Fonte parecida com a da imagem */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+.site-footer a {
+    text-decoration: none; /* Remove a linha sublinhada dos links */
+    color: inherit;
+}
+
+
+/* --- Seção Principal (Azul Claro) --- */
+.footer-main {
+    padding: 3rem 1.5rem; 
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 200px; 
+    height: auto;
+    margin-bottom: 2rem;
+}
+.footer-main p {
+    font-size: 0.9rem;
+    max-width: 600px; /* Evita que o texto fique muito largo em telas grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --- Barra Inferior (Azul Escuro) --- */
+.footer-bottom {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem em telas pequenas */
+    gap: 1.25rem; /* Espaço entre os itens quando quebrar a linha */
 }
-.Parceiros h2{
-    color: #facc15; 
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: center; 
-    z-index: 2;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+.footer-bottom-address p {
+    font-size: 0.8rem;
+}
+
+/* --- Responsividade (Celulares) --- */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        justify-content: center; /* Centraliza tudo */
+        text-align: center;
+    }
+
+    .footer-social {
+        /* Garante que os ícones fiquem na ordem correta (opcional) */
+        /* Se quiser os ícones ANTES do endereço no celular: */
+        order: -1; 
+    }
 }
