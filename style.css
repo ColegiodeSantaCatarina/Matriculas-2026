@@ -233,7 +233,7 @@ html {
 
 .coluna-imagem,
 .coluna-texto {
-    min-width: 300px;
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
