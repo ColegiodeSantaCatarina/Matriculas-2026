@@ -397,16 +397,42 @@ a {
 
 /* --- Seção Parceiros --- */
 .Parceiros {
-    text-align: center; 
-    padding: 40px 20px; 
+    text-align: center;
+    padding: 40px 5%;
 }
+
 .Parceiros h2 {
     color: #facc15;
     font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
-    margin-bottom: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    
-    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+.parceiros-container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left; 
+    align-items: center; 
+}
+
+.parceiros-coluna-esquerda,
+.parceiros-coluna-direita {
+    flex: 1;
+    min-width: 300px;
+}
+
+.parceiros-coluna-esquerda img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.parceiros-coluna-direita p {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
 
 /* --- Responsividade --- */
 
@@ -471,7 +497,6 @@ a {
     .button-wrapper button {
         padding: 12px 20px;
     }
-}
 }
 
 /* --- Reset Básico e Fontes do Rodapé --- */
@@ -552,4 +577,47 @@ a {
         /* Se quiser os ícones ANTES do endereço no celular: */
         order: -1; 
     }
+}
+
+/* --- Seção de Vídeo --- */
+.secao-video {
+    background-color: #030f3d;
+    padding: 60px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.secao-video h2 {
+    color: #facc15;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.secao-video .video-subtitulo {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 36.15%;
+    height: 0;
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px; 
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
