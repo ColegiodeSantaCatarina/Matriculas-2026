@@ -395,10 +395,20 @@ a {
     color: #FFFFFF;
 }
 
+.coluna-box-azul p{
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
+}
+.coluna-box-azul p:last-child {
+    border-bottom: none;
+}
+
 /* --- Seção Parceiros --- */
 .Parceiros {
     text-align: center;
     padding: 40px 5%;
+    position: relative;
 }
 
 .Parceiros h2 {
@@ -406,6 +416,7 @@ a {
     font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px; 
+    z-index: 2;
 }
 
 .parceiros-container-flex {
@@ -426,6 +437,7 @@ a {
     max-width: 100%;
     height: auto;
     display: block;
+    z-index: 1;
 }
 
 .parceiros-coluna-direita p {
