@@ -166,7 +166,7 @@ a {
 }
 
 .botao-agendar-zap {
-    background-color: #34D399;
+    background-color: #25D366;
     color: #030f3d;
     font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem); 
     font-weight: bold;
@@ -291,7 +291,7 @@ a {
 }
 
 .botao-agendar-interno {
-    background-color: #34D399;
+    background-color: #25D366;
     color: #030f3d;
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.1rem); 
     font-weight: bold;
@@ -345,7 +345,7 @@ a {
     margin: 0 auto;
 }
 .botao-agendar-diferenciais {
-    background-color: #34D399;
+    background-color: #25D366;
     color: #030f3d;
     font-size: 1.1rem;
     font-weight: bold;
@@ -589,7 +589,7 @@ a {
 
 .secao-video h2 {
     color: #facc15;
-    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    font-size: clamp(1.5rem, 1.5rem + 2vw, 2rem);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
