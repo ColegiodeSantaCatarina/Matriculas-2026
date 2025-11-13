@@ -434,7 +434,7 @@ a {
 }
 
 .parceiros-coluna-esquerda img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: block;
     z-index: 1;
