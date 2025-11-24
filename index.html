@@ -31,7 +31,17 @@
     <h2>Colégio Santa Catarina: Formação Completa para o Futuro</h2>
 
     <div class="video-wrapper">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/ON5HP1ox84w?si=wZzoobYakQfVnH3r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe 
+            id="videoYoutube" 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/v4l9-3sBOa8?si=k23VMk2T4ULTZJ_m&amp;enablejsapi=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
     </div>
 </section>
     <div>
@@ -197,5 +207,58 @@ Com profissionais qualificados, foca na formação humanística e integradora, u
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const videoIframe = document.getElementById('videoYoutube');
+        
+        // Função que será chamada quando o vídeo entrar na tela
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Se o vídeo estiver visível (interseção ocorreu)
+                    
+                    // 1. Pega o URL atual
+                    let src = videoIframe.src;
+                    
+                    // 2. Adiciona o parâmetro `autoplay=1` ao URL para iniciar o vídeo
+                    // A expressão verifica se o autoplay já existe e o substitui ou o adiciona.
+                    if (src.includes('autoplay=1')) {
+                        // Já está com autoplay, não faz nada
+                    } else if (src.includes('?')) {
+                        // Se já tem outros parâmetros, adiciona com &
+                        src += '&autoplay=1';
+                    } else {
+                        // Se não tem parâmetros, adiciona com ?
+                        src += '?autoplay=1';
+                    }
+                    
+                    // 3. Atualiza o src do iframe para iniciar a reprodução
+                    videoIframe.src = src;
+                    
+                    // 4. Para de observar o elemento para que ele não tente rodar de novo
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        // Configurações do Observer
+        const options = {
+            root: null, // O viewport (tela) é o elemento raiz
+            rootMargin: '0px',
+            threshold: 0.5 // Aciona quando 50% do vídeo está visível
+        };
+
+        // Cria o Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        // Começa a observar o iframe do vídeo
+        if (videoIframe) {
+            observer.observe(videoIframe);
+        }
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>

@@ -29,17 +29,23 @@ body {
     height: auto;
 }
 
-/* --- Botões sobre o banner --- */
+/* --- Botões sobre o banner (ATUALIZADO PARA MAIOR RESPONSIVIDADE) --- */
 .button-wrapper {
     position: absolute;
-    top: 55%;
-    left: 16%; 
-    transform: translate(-50%, -50%);
+    /* Posição ajustada */
+    top: 50%; /* Mantém no meio verticalmente */
+    left: 5%; /* Define uma margem esquerda responsiva */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    
+    /* Padrão: botões lado a lado em telas maiores (opcionalmente) */
     display: flex;
-    flex-direction: column;
+    flex-direction: row; 
     gap: 20px;
+    
+    /* Aumenta o max-width para permitir botões lado a lado em telas maiores */
     width: 90%; 
-    max-width: 350px; 
+    max-width: 600px; 
+    padding: 0 10px;
 }
 
 .button-wrapper button {
@@ -83,6 +89,55 @@ a {
     font-size: 1.25rem; 
 }
 
+/* --- Seção de Vídeo --- */
+.secao-video {
+    background-color: #030f3d;
+    padding: 60px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.secao-video h2 {
+    color: #facc15;
+    font-size: clamp(1.5rem, 1.5rem + 2vw, 2rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.secao-video .video-subtitulo {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.video-wrapper {
+    position: relative;
+    /* 315 / 560 = 0.5625 (56.25%) ou, para iframe do youtube em 16:9, geralmente 56.25%.
+       Se você notar barras pretas, ajuste o padding-bottom com base nas dimensões do seu iframe.
+       Para este código que usa width: 90%, vou manter o que estava, mas geralmente é 56.25%.
+       Mudei para 36.15% apenas para o código refletir o seu original, ajuste se necessário.
+    */
+    padding-bottom: 36.15%; 
+    height: 0;
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px; 
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* --- Seção 2 --- */
 .seccao2 {
     display: flex;
@@ -96,9 +151,9 @@ a {
 }
 .seccao2 img {
     max-width: 1080px; 
-    width: 90%;      
-    height: auto;    
-    display: block;  
+    width: 90%; 
+    height: auto; 
+    display: block; 
 }
 /* --- Texto informativo --- */
 .secao-info {
@@ -336,7 +391,7 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Ótimo! */
+    flex-wrap: wrap; 
     gap: 30px;
     position: relative;
     z-index: 2;
@@ -366,7 +421,7 @@ a {
 
 .coluna-box-azul {
     flex: 1;
-    min-width: 300px; /* Ótimo! */
+    min-width: 300px; 
     background-color: rgba(0, 80, 255, 0.2);
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -381,7 +436,7 @@ a {
 
 .coluna-info-visita {
     flex: 1;
-    min-width: 300px; /* Ótimo! */
+    min-width: 300px; 
     color: #FFFFFF;
     text-align: center;
 }
@@ -445,20 +500,96 @@ a {
     line-height: 1.6;
 }
 
-/* --- Responsividade --- */
+/* --- Rodapé --- */
+.site-footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site-footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+.site-footer a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+
+/* --- Seção Principal (Azul Claro) --- */
+.footer-main {
+    padding: 3rem 1.5rem; 
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 200px; 
+    height: auto;
+    margin-bottom: 2rem;
+}
+.footer-main p {
+    font-size: 0.9rem;
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --- Barra Inferior (Azul Escuro) --- */
+.footer-bottom {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 1.25rem; 
+}
+
+.footer-bottom-address p {
+    font-size: 0.8rem;
+}
+
+/* --- Responsividade (Media Queries) --- */
 
 /* Tablets */
 @media (max-width: 1000px) {
-   
+    /* Mantido: Você pode adicionar regras específicas aqui se necessário */
 }
 
 @media (max-width: 700px) {
+    /* --- Botões Header (ATUALIZADO) --- */
+    .button-wrapper {
+        /* Re-centraliza para telas menores */
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        
+        /* Empilha os botões verticalmente */
+        flex-direction: column; 
+        
+        width: 90%;
+        max-width: 350px; 
+    }
+    
     .banner-container img {
         height: auto;
     }
-    .button-wrapper {
-        top: 60%;
-    }
+    
     .secao-explicacao,
     .secao-explicacao:nth-child(even) {
         flex-direction: column;
@@ -492,6 +623,12 @@ a {
     .coluna-box-azul {
         text-align: center;
     }
+    
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* Celulares pequenos */
@@ -508,127 +645,4 @@ a {
     .button-wrapper button {
         padding: 12px 20px;
     }
-}
-
-/* --- Reset Básico e Fontes do Rodapé --- */
-.site-footer * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.site-footer {
-    /* Fonte parecida com a da imagem */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-    line-height: 1.5;
-}
-
-.site-footer a {
-    text-decoration: none; /* Remove a linha sublinhada dos links */
-    color: inherit;
-}
-
-
-/* --- Seção Principal (Azul Claro) --- */
-.footer-main {
-    padding: 3rem 1.5rem; 
-    text-align: center;
-}
-
-.footer-logo img {
-    max-width: 200px; 
-    height: auto;
-    margin-bottom: 2rem;
-}
-.footer-main p {
-    font-size: 0.9rem;
-    max-width: 600px; /* Evita que o texto fique muito largo em telas grandes */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-info {
-    margin-top: 1.5rem;
-}
-
-.contact-info p {
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-}
-.contact-info p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* --- Barra Inferior (Azul Escuro) --- */
-.footer-bottom {
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem em telas pequenas */
-    gap: 1.25rem; /* Espaço entre os itens quando quebrar a linha */
-}
-
-.footer-bottom-address p {
-    font-size: 0.8rem;
-}
-
-/* --- Responsividade (Celulares) --- */
-@media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        justify-content: center; /* Centraliza tudo */
-        text-align: center;
-    }
-
-    .footer-social {
-        /* Garante que os ícones fiquem na ordem correta (opcional) */
-        /* Se quiser os ícones ANTES do endereço no celular: */
-        order: -1; 
-    }
-}
-
-/* --- Seção de Vídeo --- */
-.secao-video {
-    background-color: #030f3d;
-    padding: 60px 5%;
-    text-align: center;
-    overflow: hidden;
-}
-
-.secao-video h2 {
-    color: #facc15;
-    font-size: clamp(1.5rem, 1.5rem + 2vw, 2rem);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-.secao-video .video-subtitulo {
-    color: #FFFFFF;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 36.15%;
-    height: 0;
-    overflow: hidden;
-    width: 90%;
-    max-width: 900px; 
-    margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
