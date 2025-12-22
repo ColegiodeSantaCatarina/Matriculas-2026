@@ -663,16 +663,16 @@ a {
 
 /* Celulares pequenos */
 @media (max-width: 480px) {
-    .secao-info {
-        padding: 20px;
-    }
-    .botao-agendar-zap,
-    .botao-agendar-interno {
-        width: 100%;
-        max-width: none;
+    .button-wrapper {
+        top: 88%; 
+        width: 95%; 
     }
 
-    .button-wrapper button {
-        padding: 12px 20px;
+    .banner-container picture img {
+        object-position: center 20%; 
+    }
+
+    h1, .titulo-principal {
+        font-size: 1.5rem; 
     }
 }
