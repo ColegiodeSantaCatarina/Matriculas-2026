@@ -589,7 +589,7 @@ a {
     }
 
     .button-wrapper {
-        top: 65%; /* Move os botões um pouco para baixo para não cobrir o rosto na foto vertical */
+        top: 80%; /* Move os botões um pouco para baixo para não cobrir o rosto na foto vertical */
         left: 50%; 
         transform: translate(-50%, -50%); 
         flex-direction: column; 
@@ -601,7 +601,7 @@ a {
     /* --- Botões Header (ATUALIZADO) --- */
     .button-wrapper {
         /* Re-centraliza para telas menores */
-        top: 50%; 
+        top: 80%; 
         left: 50%; 
         transform: translate(-50%, -50%); 
         
