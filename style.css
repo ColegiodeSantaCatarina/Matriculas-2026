@@ -649,6 +649,10 @@ a {
     .coluna-box-azul {
         text-align: center;
     }
+    .parceiros-coluna-esquerda{
+        display: flex;
+        justify-content: center;
+    }
     
     .footer-bottom {
         flex-direction: column;
