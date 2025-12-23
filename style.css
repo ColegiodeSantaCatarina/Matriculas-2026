@@ -36,21 +36,17 @@ body {
     height: auto;
 }
 
-/* --- Botões sobre o banner (ATUALIZADO PARA MAIOR RESPONSIVIDADE) --- */
+/* --- Botões sobre o banner --- */
 .button-wrapper {
     position: absolute;
-    /* Posição ajustada */
-    top: 50%; /* Mantém no meio verticalmente */
-    left: 5%; /* Define uma margem esquerda responsiva */
-    transform: translateY(-50%); /* Centraliza verticalmente */
-    
-    /* Padrão: botões lado a lado em telas maiores (opcionalmente) */
+    top: 50%; 
+    left: 8%; 
+    transform: translateY(-50%);
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     gap: 20px;
-    
     /* Aumenta o max-width para permitir botões lado a lado em telas maiores */
-    width: 90%; 
+    width: 20%; 
     max-width: 600px; 
     padding: 0 10px;
 }
@@ -99,7 +95,7 @@ a {
 /* --- Seção de Vídeo --- */
 .secao-video {
     background-color: #030f3d;
-    padding: 60px 5%;
+    padding: 60px 10%;
     text-align: center;
     overflow: hidden;
 }
@@ -121,16 +117,11 @@ a {
 
 .video-wrapper {
     position: relative;
-    /* 315 / 560 = 0.5625 (56.25%) ou, para iframe do youtube em 16:9, geralmente 56.25%.
-       Se você notar barras pretas, ajuste o padding-bottom com base nas dimensões do seu iframe.
-       Para este código que usa width: 90%, vou manter o que estava, mas geralmente é 56.25%.
-       Mudei para 36.15% apenas para o código refletir o seu original, ajuste se necessário.
-    */
     padding-bottom: 36.15%; 
     height: 0;
     overflow: hidden;
-    width: 90%;
-    max-width: 900px; 
+    width: 100%;
+    max-width: 1000px; 
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -572,7 +563,9 @@ a {
 }
 
 /* --- Responsividade (Media Queries) --- */
-
+@media{
+    
+}
 /* Tablets */
 @media (max-width: 1000px) {
     /* Mantido: Você pode adicionar regras específicas aqui se necessário */
@@ -674,5 +667,10 @@ a {
 
     h1, .titulo-principal {
         font-size: 1.5rem; 
+    }
+    .coluna-texto,
+    .secao-explicacao:nth-child(even) .coluna-texto {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
